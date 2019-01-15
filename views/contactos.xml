@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data>
+        <act_window id="agenda_contacto_action" name="contacto"
+                     res_model="agenda.contactos" />
+
+
+
+
+        <menuitem name="contactos" id="menu_contactos" action="agenda_contacto_action" parent="menu_inicio" sequence="10"/>
+
+
+        <record id="agenda_contacto_view_tree" model="ir.ui.view">
+            <field name="name">Lista contactos</field>
+            <field name="model">agenda.contactos</field>
+            <field name="arch" type="xml">
+
+
+
+                <tree>
+
+                    <field name="dni" />
+                    <field name="nombre" />
+                    <field name="provincia" />
+
+                </tree>
+            </field>
+        </record>
+
+        <record id="agenda_contacto_view_form" model="ir.ui.view">
+            <field name="name">Formulario de contactos</field>
+            <field name="model">agenda.contactos</field>
+            <field name="arch" type="xml">
+                <form>
+
+                      <header>
+                        <button name="limpiar" type="object" string="Limpia" class="oe_highlight" />
+                        <button name="limpia_todo" type="object" string="Limpia todo" class="oe_highlight" />
+                         <button name="render_html" type="object" string="kkkkl" class="oe_highlight" />
+
+
+                    </header>
+
+                    <group>
+                    <field name="dni" />
+                    <field name="nombre" />
+                    <field name="provincia" />
+
+
+                    </group>
+                </form>
+            </field>
+        </record>
+
+        <record id="agenda_contacto_view_search" model="ir.ui.view">
+            <field name="name">Busqueda contactos</field>
+            <field name="model">agenda.contactos</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="dni" />
+                    <field name="nombre" />
+                    <field name="provincia" />
+
+
+                </search>
+            </field>
+        </record>
+
+    </data>
+</odoo>

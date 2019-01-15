@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data>
+        <act_window id="agenda_provincia_action" name="provincia"
+                     res_model="agenda.provincias" />
+
+
+
+
+        <menuitem name="provincias" id="menu_provincias" action="agenda_provincia_action" parent="menu_inicio" sequence="10"/>
+
+
+        <record id="agenda_provincia_view_tree" model="ir.ui.view">
+            <field name="name">Lista provincias</field>
+            <field name="model">agenda.provincias</field>
+            <field name="arch" type="xml">
+
+                <tree>
+
+                    <field name="cod" />
+                    <field name="nombre" />
+                    <field name="comunidad" />
+
+                </tree>
+            </field>
+        </record>
+
+        <record id="agenda_provincia_view_form" model="ir.ui.view">
+            <field name="name">Formulario de provincias</field>
+            <field name="model">agenda.provincias</field>
+            <field name="arch" type="xml">
+                <form>
+
+                    <group>
+                    <field name="cod" />
+                    <field name="nombre" />
+                    <field name="comunidad" />
+
+
+                    </group>
+                </form>
+            </field>
+        </record>
+
+        <record id="agenda_provincia_view_search" model="ir.ui.view">
+            <field name="name">Busqueda provincias</field>
+            <field name="model">agenda.provincias</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="cod" />
+                    <field name="nombre" />
+                    <field name="comunidad" />
+
+
+                </search>
+            </field>
+        </record>
+
+    </data>
+</odoo>
