@@ -2,7 +2,7 @@
         <report id="report_tienda_lineas" string="Reporte personalizado" model="agenda.contactos" report_type="qweb-pdf" name="agenda.report"
              file="agenda.report"/>
 
-        <template id="report">
+        <template id="report agenda">
           <t t-call="web.html_container">
               <t t-foreach="docs" t-as="o">
                   <t t-call="web.external_layout">
